@@ -5,12 +5,14 @@ Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 7.0.50~), cmake, kdelibs5-dev (>> 4:4.4), libxi-dev, x11proto-input-dev, libx11-dev
 Standards-Version: 3.8.4
 Uploaders: Sune Vuorela <sune@debian.org>
+Homepage: http://kde-apps.org/content/show.php/synaptiks?content=114270
 
 Package: kde-config-touchpad
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: ${shlibs:Recommends}
 Description: touchpad configuration tool
- synaptiks touchpad configuration tool. this package contains a configuration
- tool for touchpads. The package provides a kcm module (for systemsettings), as well
- as a plasma widget and kded module to help managing touchpads, especially in KDE environments
+ synaptiks touchpad configuration tool. this package contains a 
+ configuration  tool for touchpads. The package provides a kcm 
+ module (for systemsettings), as well  as a plasma widget and kded 
+ module to help managing touchpads, especially in KDE environments
