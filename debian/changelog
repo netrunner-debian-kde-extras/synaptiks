@@ -1,3 +1,15 @@
+synaptiks (0.5.2-1) UNRELEASED; urgency=low
+
+  * New upstream version.
+    - Complete rewrite in python.
+  * Bump debian/compat to 8.
+  * Add myself as uploader.
+  * Add a watch file.
+  * Add Vcs-* control fields.
+  * Bump Standards-Version to 3.9.1, no changes needed.
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Fri, 11 Feb 2011 16:12:06 +0100
+
 synaptiks (0.4.0-1) unstable; urgency=low
 
   * Initial release (Closes: #582058)

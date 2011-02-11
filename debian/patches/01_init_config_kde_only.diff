@@ -1,0 +1,7 @@
+--- synaptiks-0.5.2.orig/autostart/synaptiks_init_config.desktop
++++ synaptiks-0.5.2/autostart/synaptiks_init_config.desktop
+@@ -4,3 +4,4 @@ Exec=synaptikscfg init
+ Name=Synaptiks touchpad configuration
+ Comment=Initialize touchpad configuration
+ Terminal=False
++OnlyShowIn=KDE;
