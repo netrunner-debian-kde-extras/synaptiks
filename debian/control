@@ -19,7 +19,14 @@ Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/synaptiks.git
 
 Package: kde-config-touchpad
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, python-kde4
+Depends: ${python:Depends},
+         ${misc:Depends},
+         python (>= 2.7) | python-argparse,
+         python-pkg-resources,
+         python-qt4 (>= 4.8),
+         python-kde4 (>= 4:4.5),
+         libxi6 (>= 2:1.4)
+Breaks: ${python:Breaks}
 Description: touchpad configuration tool (synaptiks)
  synaptiks touchpad configuration tool. this package contains a 
  configuration  tool for touchpads. The package provides a kcm 
