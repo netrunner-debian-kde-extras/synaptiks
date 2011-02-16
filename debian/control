@@ -2,6 +2,7 @@ Source: synaptiks
 Section: x11
 Priority: extra
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Felix Geyer <debfx-pkg@fobos.de>
 Build-Depends: debhelper (>= 8),
                kdesdk-scripts,
                kdelibs-bin,
@@ -12,8 +13,6 @@ Build-Depends: debhelper (>= 8),
                python-pyudev
 X-Python-Version: >= 2.6
 Standards-Version: 3.9.1
-Uploaders: Sune Vuorela <sune@debian.org>,
-           Felix Geyer <debfx-pkg@fobos.de>
 Homepage: http://kde-apps.org/content/show.php/synaptiks?content=114270
 Vcs-Git: git://git.debian.org/pkg-kde/kde-extras/synaptiks.git
 Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/synaptiks.git

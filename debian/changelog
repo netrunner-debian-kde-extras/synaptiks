@@ -7,8 +7,9 @@ synaptiks (0.5.2-1) UNRELEASED; urgency=low
   * Add a watch file.
   * Add Vcs-* control fields.
   * Bump Standards-Version to 3.9.1, no changes needed.
+  * Drop Sune Vuorela from Uploaders on his request.
 
- -- Felix Geyer <debfx-pkg@fobos.de>  Fri, 11 Feb 2011 16:12:06 +0100
+ -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 16 Feb 2011 13:19:49 +0100
 
 synaptiks (0.4.0-1) unstable; urgency=low
 
