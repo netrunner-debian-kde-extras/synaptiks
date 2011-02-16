@@ -2,6 +2,9 @@ synaptiks (0.5.2-1) UNRELEASED; urgency=low
 
   * New upstream version.
     - Complete rewrite in python.
+    - Adds support for two-finger emulation. (Closes: #605686)
+    - Fixes incorrect description on automatic touchpad control option.
+      (Closes: #597038)
   * Bump debian/compat to 8.
   * Add myself as uploader.
   * Add a watch file.
@@ -9,7 +12,7 @@ synaptiks (0.5.2-1) UNRELEASED; urgency=low
   * Bump Standards-Version to 3.9.1, no changes needed.
   * Drop Sune Vuorela from Uploaders on his request.
 
- -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 16 Feb 2011 13:19:49 +0100
+ -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 16 Feb 2011 16:21:01 +0100
 
 synaptiks (0.4.0-1) unstable; urgency=low
 
