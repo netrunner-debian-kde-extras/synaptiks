@@ -11,8 +11,9 @@ synaptiks (0.5.2-1) UNRELEASED; urgency=low
   * Add Vcs-* control fields.
   * Bump Standards-Version to 3.9.1, no changes needed.
   * Drop Sune Vuorela from Uploaders on his request.
+  * Install upstream changelog.
 
- -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 16 Feb 2011 16:21:01 +0100
+ -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 16 Feb 2011 19:50:12 +0100
 
 synaptiks (0.4.0-1) unstable; urgency=low
 
