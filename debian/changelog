@@ -1,4 +1,4 @@
-synaptiks (0.5.2-1) UNRELEASED; urgency=low
+synaptiks (0.5.3-1) UNRELEASED; urgency=low
 
   * New upstream version.
     - Complete rewrite in python.
