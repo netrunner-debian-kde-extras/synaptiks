@@ -26,7 +26,9 @@ Depends: ${python:Depends},
          python-qt4 (>= 4.8),
          python-kde4 (>= 4:4.5),
          libxi6 (>= 2:1.4)
-Breaks: ${python:Breaks}
+Recommends: libxtst6,
+            python-dbus,
+            upower
 Description: touchpad configuration tool (synaptiks)
  synaptiks touchpad configuration tool. this package contains a 
  configuration  tool for touchpads. The package provides a kcm 
