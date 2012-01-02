@@ -4,9 +4,9 @@
 %:
 	dh $@ --with python2
 
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf build
+
 override_dh_installchangelogs:
 	dh_installchangelogs CHANGES.rst
-
-override_dh_clean:
-	dh_clean
-	rm -rf build

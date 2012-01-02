@@ -1,4 +1,4 @@
-synaptiks (0.6.2-1) UNRELEASED; urgency=low
+synaptiks (0.8.0-1) UNRELEASED; urgency=low
 
   * New upstream version.
     - Complete rewrite in python.
@@ -9,10 +9,10 @@ synaptiks (0.6.2-1) UNRELEASED; urgency=low
   * Add myself as uploader.
   * Add a watch file.
   * Add Vcs-* control fields.
-  * Bump Standards-Version to 3.9.1, no changes needed.
+  * Bump Standards-Version to 3.9.2, no changes needed.
   * Drop Sune Vuorela from Uploaders on his request.
   * Install upstream changelog.
-  * Remove build/ dir in dh_clean.
+  * Remove build/ dir in dh_auto_clean.
 
  -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 16 Feb 2011 19:50:12 +0100
 

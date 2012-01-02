@@ -4,7 +4,6 @@ Priority: extra
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Felix Geyer <debfx-pkg@fobos.de>
 Build-Depends: debhelper (>= 8),
-               kdesdk-scripts,
                kdelibs-bin,
                kdoctools,
                python,
@@ -12,7 +11,7 @@ Build-Depends: debhelper (>= 8),
                python-argparse,
                python-pyudev
 X-Python-Version: >= 2.6
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://kde-apps.org/content/show.php/synaptiks?content=114270
 Vcs-Git: git://git.debian.org/pkg-kde/kde-extras/synaptiks.git
 Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/synaptiks.git
@@ -30,7 +29,7 @@ Recommends: libxtst6,
             python-dbus,
             upower
 Description: touchpad configuration tool (synaptiks)
- synaptiks touchpad configuration tool. this package contains a 
- configuration  tool for touchpads. The package provides a kcm 
- module (for systemsettings), as well  as a plasma widget and kded 
- module to help managing touchpads, especially in KDE environments
+ synaptiks touchpad configuration tool. this package contains a
+ configuration  tool for touchpads. The package provides a kcm
+ module (for systemsettings), as well as a plasma widget and kded
+ module to help managing touchpads, especially in KDE environments.
