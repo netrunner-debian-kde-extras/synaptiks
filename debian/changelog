@@ -18,6 +18,7 @@ synaptiks (0.8.1-0r1) UNRELEASED; urgency=low
 
   [ Modestas Vainius ]
   * Add myself as Uploader.
+  * Fixup debian/copyright that lintian does not think it is a template.
 
  -- Modestas Vainius <modax@debian.org>  Sat, 18 Feb 2012 16:01:05 +0200
 
