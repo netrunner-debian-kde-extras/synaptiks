@@ -1,10 +1,12 @@
 synaptiks (0.8.1-0r1) UNRELEASED; urgency=low
 
-  * New upstream version.
+  * New upstream version: (Closes: #653933)
     - Complete rewrite in python.
     - Adds support for two-finger emulation. (Closes: #605686)
     - Fixes incorrect description on automatic touchpad control option.
       (Closes: #597038)
+    - Acts when USB mouse is plugged in. (Closes: #621831)
+    - Works without HAL. (Closes: #629940)
 
   [ Felix Geyer ]
   * Bump debian/compat to 8.
