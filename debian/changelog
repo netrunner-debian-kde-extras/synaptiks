@@ -1,4 +1,4 @@
-synaptiks (0.8.1-0r1) UNRELEASED; urgency=low
+synaptiks (0.8.1-1) unstable; urgency=low
 
   * New upstream version: (Closes: #653933)
     - Complete rewrite in python.
@@ -22,7 +22,7 @@ synaptiks (0.8.1-0r1) UNRELEASED; urgency=low
   * Add myself as Uploader.
   * Fixup debian/copyright that lintian does not think it is a template.
 
- -- Modestas Vainius <modax@debian.org>  Sat, 18 Feb 2012 16:01:05 +0200
+ -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Sat, 18 Feb 2012 16:25:32 +0200
 
 synaptiks (0.4.0-1) unstable; urgency=low
 
