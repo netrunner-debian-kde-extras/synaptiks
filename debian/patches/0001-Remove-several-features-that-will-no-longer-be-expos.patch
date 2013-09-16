@@ -1,0 +1,215 @@
+From e24d2f86cc52f5441ad1d630fbf8d0ab0483b018 Mon Sep 17 00:00:00 2001
+From: Chris Reffett <geekboy72@gmail.com>
+Date: Fri, 31 Aug 2012 12:00:59 -0400
+Subject: [PATCH] Remove several features that will no longer be exposed in
+ future releases of the synaptics driver.
+
+---
+ doc/api/touchpad.rst                     |  4 ----
+ doc/handbook/reference.rst               | 14 --------------
+ doc/handbook/usage.rst                   |  6 ------
+ synaptiks/config.py                      |  3 +--
+ synaptiks/kde/widgets/ui/hardwarepage.ui | 26 --------------------------
+ synaptiks/kde/widgets/ui/motionpage.ui   | 16 ----------------
+ synaptiks/kde/widgets/ui/tappingpage.ui  | 16 ----------------
+ synaptiks/touchpad.py                    | 13 -------------
+ 10 files changed, 4 insertions(+), 98 deletions(-)
+
+Index: b/doc/api/touchpad.rst
+===================================================================
+--- a/doc/api/touchpad.rst
++++ b/doc/api/touchpad.rst
+@@ -27,8 +27,6 @@ The touchpad class
+ 
+    .. autoattribute:: acceleration_factor
+ 
+-   .. autoattribute:: edge_motion_always
+-
+    .. rubric:: scrolling properties
+ 
+    .. autoattribute:: vertical_edge_scrolling
+@@ -55,8 +53,6 @@ The touchpad class
+ 
+    .. rubric:: tapping properties
+ 
+-   .. autoattribute:: fast_taps
+-
+    .. autoattribute:: rt_tap_action
+ 
+    .. autoattribute:: rb_tap_action
+Index: b/doc/handbook/reference.rst
+===================================================================
+--- a/doc/handbook/reference.rst
++++ b/doc/handbook/reference.rst
+@@ -69,13 +69,6 @@ The touchpad configuration module is ava
+       The acceleration between :guilabel:`Minimum speed` and :guilabel:`Maximum
+       speed`
+ 
+-:guilabel:`Continue cursor motion when hitting the touchpad edge`
+-   Continue the cursor move while the finger stays in the touchpad edge
+-
+-   :guilabel:`For all movements, not only dragging`
+-      Always continue cursor movement, when hitting the touchpad edge, not only
+-      when dragging
+-
+ 
+ .. _commands-scrolling-configuration:
+ 
+@@ -152,13 +145,6 @@ The touchpad configuration module is ava
+ 
+    Screenshot of the tapping configuration page
+ 
+-:guilabel:`General tapping settings`
+-
+-   :guilabel:`Make single taps faster and double taps slower (fast taps)`
+-      Enable or disable fast taps.  If fast taps are enabled, the driver will
+-      react faster on single taps, but slower on double clicks caused by double
+-      taps.
+-
+ :guilabel:`Mouse clicks triggered by tapping`
+     :guilabel:`Top left corner`
+        Configure the mouse button, which is triggered by tapping the top left
+Index: b/doc/handbook/usage.rst
+===================================================================
+--- a/doc/handbook/usage.rst
++++ b/doc/handbook/usage.rst
+@@ -41,12 +41,6 @@ though the touchpad does not actually ha
+ button is triggered by pressing the left mouse button and the right mouse
+ button at the same time.
+ 
+-Some systems have a circular touchpad.  Unfortunately the touchpad driver does
+-not detect circular touchpad automatically, so if you have a circular touchpad,
+-please enable :guilabel:`The touchpad is circular` to let the driver know, that
+-your touchpad is circular.
+-
+-
+ .. _motion-configuration:
+ 
+ Motion configuration
+Index: b/synaptiks/kde/widgets/ui/hardwarepage.ui
+===================================================================
+--- a/synaptiks/kde/widgets/ui/hardwarepage.ui
++++ b/synaptiks/kde/widgets/ui/hardwarepage.ui
+@@ -27,32 +27,6 @@
+     </widget>
+    </item>
+    <item>
+-    <widget class="QGroupBox" name="groupBox">
+-     <property name="title">
+-      <string>Hardware settings</string>
+-     </property>
+-     <layout class="QVBoxLayout" name="verticalLayout_2">
+-      <item>
+-       <widget class="QLabel" name="label_2">
+-        <property name="text">
+-         <string comment="@info">Please enable this setting, if your touchpad is circular.</string>
+-        </property>
+-        <property name="wordWrap">
+-         <bool>true</bool>
+-        </property>
+-       </widget>
+-      </item>
+-      <item>
+-       <widget class="QCheckBox" name="touchpad_circular_touchpad">
+-        <property name="text">
+-         <string comment="@option:check">The touchpad is circular</string>
+-        </property>
+-       </widget>
+-      </item>
+-     </layout>
+-    </widget>
+-   </item>
+-   <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+Index: b/synaptiks/kde/widgets/ui/motionpage.ui
+===================================================================
+--- a/synaptiks/kde/widgets/ui/motionpage.ui
++++ b/synaptiks/kde/widgets/ui/motionpage.ui
+@@ -81,22 +81,6 @@
+     </widget>
+    </item>
+    <item>
+-    <widget class="QGroupBox" name="edgeMotionGroup">
+-     <property name="title">
+-      <string comment="@title:group">Continue cursor motion when hitting the touchpad edge</string>
+-     </property>
+-     <layout class="QVBoxLayout" name="verticalLayout_3">
+-      <item>
+-       <widget class="QCheckBox" name="touchpad_edge_motion_always">
+-        <property name="text">
+-         <string comment="@option:radio">For all movements, not only dragging</string>
+-        </property>
+-       </widget>
+-      </item>
+-     </layout>
+-    </widget>
+-   </item>
+-   <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+Index: b/synaptiks/kde/widgets/ui/tappingpage.ui
+===================================================================
+--- a/synaptiks/kde/widgets/ui/tappingpage.ui
++++ b/synaptiks/kde/widgets/ui/tappingpage.ui
+@@ -15,22 +15,6 @@
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+-    <widget class="QGroupBox" name="generalSettingsGroup">
+-     <property name="title">
+-      <string comment="@title:group">General tapping settings</string>
+-     </property>
+-     <layout class="QVBoxLayout" name="verticalLayout_4">
+-      <item>
+-       <widget class="QCheckBox" name="touchpad_fast_taps">
+-        <property name="text">
+-         <string comment="@option:check">Make single taps faster and double taps slower (fast taps)</string>
+-        </property>
+-       </widget>
+-      </item>
+-     </layout>
+-    </widget>
+-   </item>
+-   <item>
+     <widget class="QGroupBox" name="tappingButtonGroup">
+      <property name="title">
+       <string comment="@title:group">Mouse clicks triggered by tapping</string>
+Index: b/synaptiks/touchpad.py
+===================================================================
+--- a/synaptiks/touchpad.py
++++ b/synaptiks/touchpad.py
+@@ -196,13 +196,11 @@ Whether the touchpad is off or not.  Thr
+     acceleration_factor = _move_speed_property(
+         2, 'The acceleration factor of cursor movement as float')
+ 
+-    edge_motion_always = device_property(
+-        'Synaptics Edge Motion Always', 'bool', 0,
+-        '``True`` if edge motion is enabled, ``False`` otherwise.')
+-
+-    fast_taps = device_property(
+-        'Synaptics Tap FastTap', 'bool', 0,
+-        '``True`` if edge taps are enabled, ``False`` otherwise.')
++    # Support removed from driver but kept as part of the config API
++    edge_motion_always = False
++
++    # Support removed from driver but kept as part of the config API
++    fast_taps = False
+ 
+     _tap_action_property = partial(device_property,
+                                    'Synaptics Tap Action', 'byte')
+@@ -291,10 +289,8 @@ generate a single scroll event.
+     circular_scrolling_distance.convert_from_property = math.degrees
+     circular_scrolling_distance.convert_to_property = math.radians
+ 
+-    circular_touchpad = device_property(
+-        'Synaptics Circular Pad', 'bool', 0,
+-        '``True``, if the touchpad is considered circular, ``False`` '
+-        'otherwise')
++    # Support removed from driver but kept as part of the config API
++    circular_touchpad = False
+ 
+     @property
+     def coasting(self):
