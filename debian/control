@@ -13,8 +13,8 @@ Build-Depends: debhelper (>= 8),
 X-Python-Version: >= 2.6
 Standards-Version: 3.9.2
 Homepage: http://synaptiks.lunaryorn.de
-Vcs-Git: git://git.debian.org/pkg-kde/kde-extras/synaptiks.git
-Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/synaptiks.git
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/synaptiks.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/synaptiks.git
 
 Package: kde-config-touchpad
 Architecture: all
