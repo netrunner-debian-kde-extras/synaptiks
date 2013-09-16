@@ -3,6 +3,12 @@ synaptiks (0.8.1-2) UNRELEASED; urgency=low
   [ José Manuel Santamaría Lema ]
   * Update the Homepage field.
 
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add 0001-Remove-several-features-that-will-no-longer-be-expos.patch taken
+    from upstream and modified by Ubuntu. Fixes crashes by accessing features
+    that were removed from synaptics 1.7 (Closes: #722058).
+    Thanks Philip Muskovac from Ubuntu.
+
  -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Sat, 19 May 2012 16:22:16 +0200
 
 synaptiks (0.8.1-1) unstable; urgency=low
