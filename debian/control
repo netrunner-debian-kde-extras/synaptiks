@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 8),
                python-argparse,
                python-pyudev
 X-Python-Version: >= 2.6
-Standards-Version: 3.9.2
+Standards-Version: 3.9.4
 Homepage: http://synaptiks.lunaryorn.de
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/synaptiks.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/synaptiks.git

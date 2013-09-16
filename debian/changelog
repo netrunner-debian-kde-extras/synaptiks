@@ -11,6 +11,7 @@ synaptiks (0.8.1-2) UNRELEASED; urgency=low
   * Add xinput_version_detect patch to fix xinput detection. Thanks
     Scott Kitterman for the patch.
   * Use canonical Vcs headers.
+  * Update Standards-Version to 3.9.4, no changes required.
 
  -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Sat, 19 May 2012 16:22:16 +0200
 
