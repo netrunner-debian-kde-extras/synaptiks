@@ -1,0 +1,17 @@
+Description: Fix xinput version detection
+  Fix xinput version detection that renders kde-config-touchpad unusable
+Author: Scott Kitterman <scott@kitterman.com>
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1039261
+Reviewed-by: Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
+
+--- synaptiks-0.8.1.orig/synaptiks/x11/input.py
++++ synaptiks-0.8.1/synaptiks/x11/input.py
+@@ -143,7 +143,7 @@ def assert_xinput_version(display):
+ 
+     Raise :exc:`XInputVersionError`, if the version isn't sufficient.
+     """
+-    matched, actual_version = xinput.query_version(display, (2, 0))
++    matched, actual_version = xinput.query_version(display.from_name(), (2, 0))
+     if not matched:
+         raise XInputVersionError((2, 0), actual_version)
+ 
