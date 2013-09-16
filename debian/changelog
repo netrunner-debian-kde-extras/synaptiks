@@ -1,4 +1,6 @@
-synaptiks (0.8.1-2) UNRELEASED; urgency=low
+synaptiks (0.8.1-2) unstable; urgency=low
+
+  * Team upload.
 
   [ José Manuel Santamaría Lema ]
   * Update the Homepage field.
@@ -13,7 +15,7 @@ synaptiks (0.8.1-2) UNRELEASED; urgency=low
   * Use canonical Vcs headers.
   * Update Standards-Version to 3.9.4, no changes required.
 
- -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Sat, 19 May 2012 16:22:16 +0200
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 16 Sep 2013 10:58:54 -0300
 
 synaptiks (0.8.1-1) unstable; urgency=low
 
