@@ -1,0 +1,29 @@
+Index: synaptiks/synaptiks/kde/widgets/__init__.py
+===================================================================
+--- synaptiks.orig/synaptiks/kde/widgets/__init__.py	2014-09-12 19:24:05.767650556 +0200
++++ synaptiks/synaptiks/kde/widgets/__init__.py	2014-09-12 19:27:12.480158233 +0200
+@@ -36,6 +36,7 @@
+ from __future__ import (print_function, division, unicode_literals,
+                         absolute_import)
+ 
++import string
+ import os
+ 
+ from PyQt4.QtCore import PYQT_VERSION
+@@ -48,6 +49,9 @@
+ 
+ PACKAGE_DIRECTORY = os.path.dirname(__file__)
+ 
++def ascii_lower(s):
++    return s.translate(
++        string.maketrans(string.ascii_uppercase, string.ascii_lowercase))
+ 
+ class DynamicUserInterfaceMixin(object):
+     """
+@@ -68,5 +72,5 @@
+         """
+         ui_description_filename = os.path.join(
+             PACKAGE_DIRECTORY, 'ui',
+-            self.__class__.__name__.lower() + '.ui')
++            ascii_lower(self.__class__.__name__) + '.ui')
+         loadUi(ui_description_filename, self)
